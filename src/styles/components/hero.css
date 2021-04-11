@@ -1,0 +1,12 @@
+.hero {
+  display: grid;
+  place-items: center;
+  height: 50vh;
+  background-color:var(--primary);
+  color: var(--white);
+}
+
+:is(.hero h1, .hero p, .hero a) {
+  display: block;
+  text-align: center;
+}

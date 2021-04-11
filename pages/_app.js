@@ -1,11 +1,15 @@
+import { ApolloProvider } from '@apollo/client'
 import { Layout } from '../src/components/Layout'
-import 'tailwindcss/tailwind.css'
+import { client } from '../src/lib/apollo-client'
+import '../src/styles/main.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ApolloProvider client={client}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ApolloProvider>
   )
 }
 

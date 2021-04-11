@@ -1,0 +1,8 @@
+:root {
+  --black: hsl(0, 0%, 15%);
+  --white: hsl(0, 0%, 100%);
+  --primary: hsl(234, 57%, 65%);
+
+
+  --max-width: 1200px;
+}
