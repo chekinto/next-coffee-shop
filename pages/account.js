@@ -8,7 +8,7 @@ export default function Account() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>Account</div>
+      <section className="container">Account</section>
     </>
   )
 }

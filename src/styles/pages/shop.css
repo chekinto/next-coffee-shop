@@ -1,0 +1,21 @@
+.shop__options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.shop__categories span {
+  font-weight: bold;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.shop__categories span:hover {
+  opacity: 1;
+}
+
+.shop__categories span + *{
+  margin-left: 1.5rem;
+}

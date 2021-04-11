@@ -1,8 +1,11 @@
 :root {
   --black: hsl(0, 0%, 15%);
   --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 93%);
   --primary: hsl(234, 57%, 65%);
-
-
   --max-width: 1200px;
+
+  --border-radius-sm: .25rem;
+  --border-radius-md: .5rem;
+  --border-radius-rounded: 2rem;
 }

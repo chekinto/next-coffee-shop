@@ -8,7 +8,7 @@ export default function Basket() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>Basket</div>
+      <section className="container">Basket</section>
     </>
   )
 }

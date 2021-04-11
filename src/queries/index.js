@@ -1,0 +1,46 @@
+import { gql } from '@apollo/client'
+
+// Fetches all products
+export const ALL_PRODUCTS = gql`
+  query AllProducts {
+    products {
+      id
+      title
+      category
+      description
+      price
+      slug
+      image {
+        url
+      }
+    }
+  }
+`
+// Fetches single Product
+export const SINGLE_PRODUCT = gql`
+  query SingleProduct($slug: String) {
+    product(where: {slug: $slug}) {
+      title
+    	descriptionLong
+      price
+      image {
+        url
+      }
+    }
+  } 
+`
+// Fetches latest 3 products
+export const LATEST_ARRIVALS = gql`
+  query LatestArrivals {
+    products(first: 3) {
+      id
+      title
+      category
+      descriptionLong
+      slug
+      image {
+        url
+      }
+    }
+  }
+`

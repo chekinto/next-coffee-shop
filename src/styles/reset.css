@@ -27,6 +27,9 @@ hr {
   box-sizing: content-box; 
   height: 0; 
   overflow: visible;
+  border: 0;
+  border-top: 1px solid var(--grey);
+  margin: 1.5rem 0;
 }
 
 pre {
@@ -81,6 +84,7 @@ sup {
 
 img {
   border-style: none;
+  max-width: 100%;
 }
 
 button,

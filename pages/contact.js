@@ -8,7 +8,7 @@ export default function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>Contact</div>
+      <section className="container">Contact</section>
     </div>
   )
 }

@@ -3,3 +3,11 @@
   margin: 0 auto;
   padding: 0 1rem;
 }
+
+.section {
+  background-color:var(--grey);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
