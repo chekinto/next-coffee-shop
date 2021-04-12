@@ -20,14 +20,30 @@ export const ALL_PRODUCTS = gql`
 export const SINGLE_PRODUCT = gql`
   query SingleProduct($slug: String) {
     product(where: {slug: $slug}) {
+      id
       title
-    	descriptionLong
+      description
+      descriptionLong
       price
       image {
         url
       }
     }
   } 
+`
+
+// Fetches product by category
+export const GET_CATEGORY = gql`
+  query GetCategory($category: String) {
+    products(where: {category: $category}) {
+      title
+      descriptionLong
+      price
+      image {
+        url
+      }
+    }
+  }
 `
 // Fetches latest 3 products
 export const LATEST_ARRIVALS = gql`
