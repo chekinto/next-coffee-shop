@@ -1,6 +1,17 @@
+import { FunctionComponent } from 'react'
 import Link from 'next/link'
 
-export const Card = ({ title, description, category, image = [], slug }) => {
+interface CardProps {
+  title: string;
+  description: string;
+  category: string;
+  image: {
+    url: string;
+  }
+  slug: string;
+}
+
+export const Card: FunctionComponent<CardProps> = ({ title, description, category, image = [], slug }) => {
   return (
     <article className="card">
       <Link href={`/${category}/${slug}`}>
