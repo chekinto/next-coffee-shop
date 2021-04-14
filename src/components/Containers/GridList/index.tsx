@@ -3,7 +3,7 @@ import { Card } from '../../../components'
 import { ProductProps } from '../../../types'
 
 interface GridListProps {
-  list: ProductProps[]
+  list: ProductProps[];
 }
 
 export const GridList: FunctionComponent<GridListProps> = ({ list = [] }) => {

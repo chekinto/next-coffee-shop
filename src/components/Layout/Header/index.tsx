@@ -5,11 +5,7 @@ import { useAppContext } from '../../../context'
 
 export const Header = () => {
   const router = useRouter()
-
   const { state } = useAppContext()
-
-  console.log('state :>> ', state);
-
 
   return (
     <header className="header container">

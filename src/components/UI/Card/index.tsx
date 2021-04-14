@@ -1,10 +1,9 @@
-import { FunctionComponent, useReducer } from 'react'
+import { FunctionComponent } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useAppContext } from '../../../context'
 import { ProductProps } from '../../../types'
 
-export const Card: FunctionComponent<ProductProps> = ({ id, title, description, category, image, slug }) => {
+export const Card: FunctionComponent<ProductProps> = ({ title, description, category, image, slug }) => {
   return (
     <article className="card">
       <Link href={`/${category}/${slug}`}>

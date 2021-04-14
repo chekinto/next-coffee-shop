@@ -5,10 +5,6 @@ export interface UserProps {
   saved: ProductProps[];
 }
 
-export interface BasketProps {
-
-}
-
 export interface ProductProps {
   id: string;
   category?: string;

@@ -1,8 +1,30 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { useAppContext } from '../src/context'
 
 export default function Basket() {
   const { state } = useAppContext();
+
+  function EmptyBasket() {
+    return (
+      <>
+        <h1>Sorry basket is empty</h1>
+        <Link href="/shop">
+          <button>Shop products</button>
+        </Link>
+      </>
+    )
+  }
+
+  function FullBasket() {
+    return (
+      <>
+        {state.basket.map(product => (
+          <p>{product.title}</p>
+        ))}
+      </>
+    )
+  }
 
   return (
     <>
@@ -12,9 +34,7 @@ export default function Basket() {
       </Head>
 
       <section className="container">
-        {state.basket.map(item => (
-          <p>{item.title}</p>
-        ))}
+        {state.basket.length < 1 ? <EmptyBasket /> : <FullBasket />}
       </section>
     </>
   )
