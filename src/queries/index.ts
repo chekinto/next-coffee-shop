@@ -1,18 +1,5 @@
 import { gql } from '@apollo/client'
 
-export interface AllProductProps {
-  product: {
-    id: string;
-    title: string;
-    category: string;
-    description: string;
-    price: number;
-    slug: string;
-    image: {
-      url: string;
-    }
-  }
-}
 // Fetches all products
 export const ALL_PRODUCTS = gql`
   query AllProducts {
@@ -29,6 +16,7 @@ export const ALL_PRODUCTS = gql`
     }
   }
 `
+
 // Fetches single Product
 export const SINGLE_PRODUCT = gql`
   query SingleProduct($slug: String) {

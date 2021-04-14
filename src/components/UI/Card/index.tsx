@@ -1,26 +1,28 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent, useReducer } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import { useAppContext } from '../../../context'
+import { ProductProps } from '../../../types'
 
-interface CardProps {
-  title: string;
-  description: string;
-  category: string;
-  image: {
-    url: string;
-  }
-  slug: string;
-}
-
-export const Card: FunctionComponent<CardProps> = ({ title, description, category, image = [], slug }) => {
+export const Card: FunctionComponent<ProductProps> = ({ id, title, description, category, image, slug }) => {
   return (
     <article className="card">
       <Link href={`/${category}/${slug}`}>
         <div className="card__image">
+          <span className="favourite__icon">
+            <Image
+              src="/icons/icon-heart-outline.svg"
+              alt="heart filled"
+              width={24}
+              height={24}
+              onClick={() => console.log('clicked')}
+            />
+          </span>
           <div className="card__pill">
             <span className={`capitalize ${category}`}>{category}</span>
           </div>
           <img
-            src={image[0].url}
+            src={image[0]?.url}
             alt={title}
           />
         </div>

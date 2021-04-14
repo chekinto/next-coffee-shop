@@ -1,14 +1,16 @@
+import { useEffect, useState } from 'react'
 import Head from 'next/head'
-import { useQuery, useLazyQuery } from '@apollo/client'
-import { ALL_PRODUCTS, GET_CATEGORY } from '../src/queries'
+import { gql, useQuery } from '@apollo/client'
+import { ALL_PRODUCTS } from '../src/queries'
 import { GridList } from '../src/components'
+import { client } from '../src/lib/apollo'
 
 export default function Shop() {
   const { data, loading, error } = useQuery(ALL_PRODUCTS)
   if (loading) return <h1>Loading...</h1>
   if (error) return <h1>Error...{error.message}</h1>
 
-  function fetchCategory(category) {
+  async function fetchCategory(category) {
     console.log(category)
   }
 
@@ -35,7 +37,7 @@ export default function Shop() {
 
         </div>
 
-        <GridList list={data.products} />
+        <GridList list={data?.products} />
       </section>
     </>
   )

@@ -35,3 +35,29 @@
 .header__icons + * {
   margin-left: .5rem;
 }
+
+.header__details {
+  display: flex;
+  align-items: center;
+}
+
+.header__details > li {
+  list-style: none;
+}
+
+.header__details > li + li {
+  margin-left: .5rem;
+}
+
+.header__basket {
+  position: relative;
+}
+
+.basket-length {
+  position: absolute;
+  top: -4px;
+  right: -16px;
+  font-weight: bold;
+  height: max-content;
+  color: var(--black);
+}

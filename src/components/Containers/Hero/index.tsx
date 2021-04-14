@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Button } from '../..'
 
 export const Hero = () => {
   return (
@@ -9,7 +8,7 @@ export const Hero = () => {
         <p>The best coffee around the town</p>
         <Link href="/shop">
           <a>
-            <Button>Shop Now</Button>
+            <button>Shop Now</button>
           </a>
         </Link>
       </div>

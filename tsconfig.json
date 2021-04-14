@@ -22,7 +22,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/context/index.js"
+    "src/context/index.js",
+    "pages/[category]/[slug].js",
+    "src/context/reducers/index.js"
   ],
   "exclude": [
     "node_modules"

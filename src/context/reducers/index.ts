@@ -1,11 +1,7 @@
-export const user = {
-  name: '',
-  email: '',
-  basket: [],
-  saved: []
-}
+import { UserProps } from "../../types"
 
-export const basketReducer = (state = {}, action) => {
+// NEED TO FIND SOLUTION FOR ACTION TYPE: ANY
+export const basketReducer = (state: UserProps, action: any) => {
   switch (action.type) {
     case 'ADD_TO_BASKET': {
       return {
@@ -13,14 +9,8 @@ export const basketReducer = (state = {}, action) => {
         basket: [...state.basket, action.payload]
       }
     }
-    // case 'REMOVE_TO_BASKET': {
-    //   const itemToRemove = state.basket.filter(item => item.id !==  item.payload);
-    //   return {
-    //     ...state,
-    //     basket: [...state.basket, action.payload]
-    //   }
-    // }
     default:
-      return state
+      throw new Error();
+    // return state
   }
 }

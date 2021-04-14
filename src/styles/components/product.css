@@ -5,6 +5,19 @@
   gap: 2rem;
 }
 
+.product__image {
+  position: relative;
+}
+
+.favourite__icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .product__cta {
   display: flex;
   justify-content: space-between;
@@ -13,4 +26,8 @@
 
 .product__price {
   font-weight: bold;
+}
+
+.product > button {
+  margin-bottom: 2rem;
 }

@@ -1,13 +1,12 @@
 import { FunctionComponent } from 'react'
-import { Product } from '../../../types'
 import { Card } from '../../../components'
+import { ProductProps } from '../../../types'
 
 interface GridListProps {
-  list: Product[]
+  list: ProductProps[]
 }
 
 export const GridList: FunctionComponent<GridListProps> = ({ list = [] }) => {
-  console.log('list :>> ', list);
   return (
     <div className="grid__list">
       {list.map(item => (
