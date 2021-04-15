@@ -1,0 +1,12 @@
+.burger-menu {
+  display: block;
+  background-color: red;
+  z-index: 10;
+}
+
+@media(min-width: 675px) {
+  .burger-menu {
+    display: none;
+    cursor: pointer;
+  }
+}

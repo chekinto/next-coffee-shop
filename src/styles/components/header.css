@@ -6,6 +6,10 @@
   padding-bottom: 1.5rem;
 }
 
+.nav {
+  display: none;
+}
+
 .nav__list {
   display: flex;
   margin: 0;
@@ -37,8 +41,7 @@
 }
 
 .header__details {
-  display: flex;
-  align-items: center;
+  display: none;
 }
 
 .header__details > li {
@@ -60,4 +63,11 @@
   font-weight: bold;
   height: max-content;
   color: var(--black);
+}
+
+@media(min-width: 675px) {
+  .header__details, .nav {
+    display: flex;
+    align-items: center;
+  }
 }

@@ -1,8 +1,6 @@
 .product__content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
+  flex-direction: column;
 }
 
 .product__image {
@@ -30,4 +28,14 @@
 
 .product > button {
   margin-bottom: 2rem;
+}
+
+
+@media(min-width: 576px) {
+  .product__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
 }

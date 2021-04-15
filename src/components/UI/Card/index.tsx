@@ -17,14 +17,17 @@ export const Card: FunctionComponent<ProductProps> = ({ title, description, cate
               onClick={() => console.log('clicked')}
             />
           </span>
+
           <div className="card__pill">
             <span className={`capitalize ${category}`}>{category}</span>
           </div>
+
           <img
             src={image[0]?.url}
             alt={title}
           />
         </div>
+
       </Link>
       <p className="card__title">{title}</p>
       <p className="card__description">{description}</p>
