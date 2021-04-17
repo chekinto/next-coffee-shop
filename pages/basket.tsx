@@ -1,27 +1,31 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { CartItem } from '../src/components';
 import { useAppContext } from '../src/context'
+import { formatPrice } from '../src/utils'
 
 export default function Basket() {
   const { state } = useAppContext();
 
-  function EmptyBasket() {
+  const EmptyBasket = () => {
     return (
       <>
         <h1>Sorry basket is empty</h1>
         <Link href="/shop">
-          <button>Shop products</button>
+          <button className="btn">Shop products</button>
         </Link>
       </>
     )
   }
 
-  function FullBasket() {
+  const FullBasket = () => {
     return (
       <>
-        {state.basket.map(product => (
-          <p>{product.title}</p>
-        ))}
+        {state.basket.map(product => {
+          return (
+            <CartItem {...product} />
+          )
+        })}
       </>
     )
   }

@@ -1,6 +1,9 @@
+@import './advert-banner.css';
 @import './button.css';
 @import './burger-menu.css';
 @import './card.css';
+@import './cart-item.css';
+@import './category-links.css';
 @import './footer.css';
 @import './grid-list.css';
 @import './header.css';

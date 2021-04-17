@@ -30,6 +30,10 @@ export const Footer = () => {
           <li>Link 1</li>
         </ul>
       </div>
+
+      <div className="footer--bottom">
+        Made with love from Che Kin To @ {new Date().getFullYear()}
+      </div>
     </footer>
   )
 }

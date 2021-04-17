@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from "next/image"
 import { useRouter } from 'next/router'
 import { useAppContext } from '../../../context'
+import { Burger } from './Burger'
 import { MobileNav } from './MobileNav'
 
 export const Header = () => {
@@ -61,19 +62,22 @@ export const Header = () => {
                 <svg className="header__icons" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
-                <span className="basket-length">{state.basket.length}</span>
+                {state.basket.length === 0 ? null : (
+                  <span className="basket-length">{state.basket.length}</span>
+                )}
               </div>
             </Link>
           </li>
         </ul>
-        <div className="burger-menu">
+        <Burger handleClick={() => setIsOpen(prevState => !prevState)} />
+        {/* <div className="burger-menu">
           <Image
             src={`${isOpen ? '/public/icons/icon-close.svg' : '/public/icons/icon-burger.svg'}`}
             width={24}
             height={24}
             onClick={() => setIsOpen(prevState => !prevState)}
           />
-        </div>
+        </div> */}
       </header>
       <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
     </>

@@ -1,11 +1,45 @@
 .burger-menu {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  height: 1.25rem;
+  position: relative;
+  z-index: 150 ;
+}
+
+.burger-menu:hover {
+  background-color: none;
+}
+
+.burger-menu > div {
+  width: 1.5rem;
+  background: var(--black);
+  height: 2px;
+}
+
+.burger-menu > div::before {
+  content: '';
   display: block;
-  background-color: red;
-  z-index: 10;
+  position: absolute;
+  top: 1px;
+  width: 1.5rem;
+  background: var(--black);
+  height: 2px;
+}
+
+.burger-menu > div::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  width: 1.5rem;
+  background: var(--black);
+  height: 2px;
 }
 
 @media(min-width: 675px) {
-  .burger-menu {
+  button.burger-menu {
     display: none;
     cursor: pointer;
   }

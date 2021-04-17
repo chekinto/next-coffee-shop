@@ -1,16 +1,19 @@
 .product__content {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 }
 
 .product__image {
   position: relative;
+  overflow: hidden;
 }
 
 .favourite__icon {
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  left: 1rem;
   cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;
@@ -31,11 +34,10 @@
 }
 
 
-@media(min-width: 576px) {
+/* @media screen and (min-width: 576px) {
   .product__content {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
   }
-}
+} */

@@ -11,6 +11,8 @@ export interface ProductProps {
   description?: string;
   descriptionLong?: string;
   price?: number;
+  isPopular: boolean;
+  quantity?: number;
   image?: {
     url?: String;
   }

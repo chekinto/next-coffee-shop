@@ -8,7 +8,7 @@ export const Hero = () => {
         <p>The best coffee around the town</p>
         <Link href="/shop">
           <a>
-            <button>Shop Now</button>
+            <button className="btn">Shop Now</button>
           </a>
         </Link>
       </div>

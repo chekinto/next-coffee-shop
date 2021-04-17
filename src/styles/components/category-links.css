@@ -1,0 +1,14 @@
+.category__links a {
+  font-weight: bold;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.category__links a:hover {
+  opacity: 1;
+}
+
+.category__links a + *{
+  margin-left: 1.5rem;
+}

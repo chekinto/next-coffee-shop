@@ -31,7 +31,6 @@ export const AppContextProvider: FunctionComponent<AppContextProps> = ({ childre
       price: price[0]
     }
     dispatch({ type: 'ADD_TO_BASKET', payload })
-    console.log('payload :>> ', payload);
   }
 
   return (

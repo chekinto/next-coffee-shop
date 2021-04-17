@@ -3,7 +3,23 @@
   border-radius: var(--border-radius-md);
   background-color: var(--white);
   padding: 1.5rem;
-  overflow: hidden;
+  position: relative;
+}
+
+.card-popular {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  background-color: red;
+  height: 3rem;
+  width: 3rem;
+  z-index: 10;
+  top: -1rem;
+  right: -1rem;
+  border-radius: 50%;
+  font-size: .5rem;
+  font-weight: bold;
+  color: var(--white);
 }
 
 .card__pill {
@@ -42,6 +58,8 @@
 
 .card__image > img {
   object-fit: cover;
+  border-top-left-radius: var(--border-radius-md);
+  border-top-right-radius: var(--border-radius-md);
 }
 
 .card__content {

@@ -10,6 +10,8 @@ export const ALL_PRODUCTS = gql`
       description
       price
       slug
+      isPopular
+      quantity
       image {
         url
       }
@@ -26,6 +28,8 @@ export const SINGLE_PRODUCT = gql`
       description
       descriptionLong
       price
+      isPopular
+      quantity
       image {
         url
       }
@@ -37,9 +41,12 @@ export const SINGLE_PRODUCT = gql`
 export const GET_CATEGORY = gql`
   query GetCategory($category: String) {
     products(where: {category: $category}) {
+      id
       title
       descriptionLong
       price
+      isPopular
+      slug
       image {
         url
       }
@@ -60,4 +67,16 @@ export const LATEST_ARRIVALS = gql`
       }
     }
   }
+`
+
+export const UPDATE_QUANTITY = gql`
+  mutation UpdateQuantity($id: ID, $quantity: number){
+  updateProduct(where: {id: $id} data: {quantity: $quantity}) {
+    category
+    quantity
+    title
+    description
+    image
+  }
+}
 `

@@ -1,11 +1,16 @@
 import { FunctionComponent } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useAppContext } from '../../../context'
 import { ProductProps } from '../../../types'
 
-export const Card: FunctionComponent<ProductProps> = ({ title, description, category, image, slug }) => {
+export const ProductCard: FunctionComponent<ProductProps> = ({ id, title, description, category, image, slug, isPopular, price, quantity }) => {
+  const { addToBasket } = useAppContext()
+
   return (
     <article className="card">
+      {isPopular && <span className="card-popular">Popular</span>}
+
       <Link href={`/${category}/${slug}`}>
         <div className="card__image">
           <span className="favourite__icon">
@@ -31,7 +36,7 @@ export const Card: FunctionComponent<ProductProps> = ({ title, description, cate
       </Link>
       <p className="card__title">{title}</p>
       <p className="card__description">{description}</p>
-      <button>Add to basket</button>
+      <button className="btn" onClick={() => addToBasket({ id, title, description, image, price, quantity })}>Add to basket</button>
     </article>
   )
 }

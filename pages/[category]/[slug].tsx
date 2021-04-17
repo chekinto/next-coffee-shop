@@ -21,7 +21,7 @@ export default function SingleProduct() {
   return (
     <>
       <section className="product container">
-        <button onClick={() => router.back()}>Back</button>
+        <button className="btn" onClick={() => router.back()}>Back</button>
 
         <div className="product__content">
           <div className="product__image">
@@ -46,7 +46,7 @@ export default function SingleProduct() {
 
             <div className="product__cta">
               <span className="product__price">{formatPrice(data?.product?.price[0])}</span>
-              <button onClick={() => addToBasket(data)}>Add to cart</button>
+              <button className="btn" onClick={() => addToBasket(data)}>Add to cart</button>
             </div>
           </div>
         </div>
