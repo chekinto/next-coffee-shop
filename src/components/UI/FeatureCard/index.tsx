@@ -14,7 +14,7 @@ export const FeatureCard: FunctionComponent<FeatureCardProps> = ({ title, subhea
       <div className="feature-card__image">
         <img src={image} alt={`${title} - ${subheading}`} />
       </div>
-      <div className={`${title}-banner`}></div>
+      <div className={`${title}-separator`}></div>
 
       <div className="feature-card__content">
         <div>
@@ -25,8 +25,6 @@ export const FeatureCard: FunctionComponent<FeatureCardProps> = ({ title, subhea
           <button>Shop now</button>
         </Link>
       </div>
-
-
     </div>
   )
 }
