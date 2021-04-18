@@ -2,9 +2,9 @@ import { useReducer } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useQuery } from '@apollo/client'
-import { useAppContext } from '../../src/context'
-import { SINGLE_PRODUCT } from '../../src/queries'
-import { formatPrice } from '../../src/utils'
+import { useAppContext } from '../../../src/context'
+import { SINGLE_PRODUCT } from '../../../src/queries'
+import { formatPrice } from '../../../src/utils'
 
 export default function SingleProduct() {
   const router = useRouter()

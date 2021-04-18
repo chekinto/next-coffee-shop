@@ -2,8 +2,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem 0;
+  height: 6rem;
 }
 
 .category--active {
   color: var(--primary);
 }
+
+.filter-container {
+  display: flex;
+  gap: .5rem;
+  border-radius: var(--border-radius-rounded);
+  font-size: var(--small-text);
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+

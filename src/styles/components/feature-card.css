@@ -1,0 +1,61 @@
+.feature-card {
+  width: 20rem;
+  padding: 2rem;
+  border: 1px solid black;
+  align-self: stretch;
+  text-align: center;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+}
+
+.feature-card__image {
+}
+
+.feature-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.feature-card__content >button {
+  flex: 1;
+}
+
+.feature-card__image img{
+  padding: -2rem;
+  height: 40px;
+}
+
+.feature-card button {
+  margin-top: auto;
+}
+
+/* Dynamic class selectors */
+.feature-card-think {
+  border: 1px solid green;
+}
+
+.feature-card-defend {
+  border: 1px solid blue;
+}
+
+.feature-card-chill {
+  border: 1px solid red;
+}
+
+div[class*="-separator"] {
+  height: .25rem;
+  margin: 0 -2rem 2rem; 
+}
+
+.think-banner {
+  background-color: green;
+}
+
+.defend-banner {
+  background-color: blue;
+}
+
+.chill-banner {
+  background-color: red;
+}

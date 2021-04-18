@@ -1,0 +1,128 @@
+.category-banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 20rem;
+  z-index: 1;
+}
+
+.category-banner::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: hsl(0, 0%, 11%);
+  opacity: 0.33;
+}
+
+.category-banner-inner.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+}
+
+.category__content {
+  color: var(--white);
+  z-index: 2;
+  width: 100%;
+}
+
+.category__content h1 {
+  font-size: var(--heading-2);
+  letter-spacing: .10rem;
+}
+
+:is(.category__content > h1, .category__content > p, .category__content > small) {
+  display: block;
+  text-align: center;
+}
+
+.category-start-with {
+  display: none;
+}
+
+.category-start-with div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category-start-with p {
+  padding: 0;
+  margin: 0;
+  font-size: .75rem;
+  margin-bottom: 0;
+}
+
+/* Dynamic class selectors start */
+p[class*='-with-think'] {
+  font-weight: bold;
+  font-size: .75rem;
+}
+
+.start-with-think {
+  color: green;
+}
+
+.start-with-chill {
+  color: blue;
+}
+
+.start-with-defend {
+  color: red;
+}
+
+button[class*="-cta"] {
+  border: none;
+  color: white;
+  width: 10rem;
+  font-size: 10px;
+}
+
+.think-cta {
+  background-color: green;
+}
+
+.chill-cta {
+  background-color: blue;
+}
+
+.defend-cta {
+  background-color: red;
+}
+/* Dynamic class selectors end */
+
+@media(min-width: 768px) {
+  .category-start-with {
+    display: initial;
+    border-radius: var(--border-radius-md);
+    background-color: var(--white);
+    padding: 1.5rem;
+    z-index: 2;
+    align-self: flex-end;
+    margin-bottom: 2rem;
+  }
+
+  .category-start-with > button {
+    align-self: flex-end;
+  }
+}
+
+@media(min-width: 576px){
+  .category__content h1 {
+    font-size: var(--heading-big);
+  }
+  
+  .category__content > small {
+    color:var(--white);
+  }
+
+  :is(.category__content > h1, .category__content > p, .category__content > small) {
+    text-align: initial;
+  }
+}

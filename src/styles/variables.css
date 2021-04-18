@@ -10,4 +10,18 @@
   --border-radius-rounded: 2rem;
   --cubic-bezier: cubic-bezier(.83,.43,1,1.03);
   --max-width: 1200px;
+
+  --base-text: 1rem;
+  --heading-big: 4.2rem;
+  --heading-1: 3.2rem;
+  --heading-2: 2.4rem;
+  --heading-3: 1.8rem;
+  --heading-4: 1.4rem;
+  --small-text: 0.8rem;
 }
+
+/* Breakpoints */
+/* 576px */
+/* 768px */
+/* 1024px */
+/* 1280px */

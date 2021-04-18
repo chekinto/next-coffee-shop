@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client'
 
+// QUERIES
 // Fetches all products
 export const ALL_PRODUCTS = gql`
   query AllProducts {
@@ -56,7 +57,7 @@ export const GET_CATEGORY = gql`
 // Fetches latest 3 products
 export const LATEST_ARRIVALS = gql`
   query LatestArrivals {
-    products(first: 3) {
+    products(orderBy: createdAt_DESC, first: 3) {
       id
       title
       category
@@ -68,7 +69,19 @@ export const LATEST_ARRIVALS = gql`
     }
   }
 `
+// Fetches first single category
+export const SINGLE_CATEGORY = gql`
+  query FirstCategoryItem($category: String){
+    products(first:1, where:{category: $category}){
+      title
+      category
+      slug
+      price
+    }
+  }
+`
 
+// MUTATIONS
 export const UPDATE_QUANTITY = gql`
   mutation UpdateQuantity($id: ID, $quantity: number){
   updateProduct(where: {id: $id} data: {quantity: $quantity}) {
