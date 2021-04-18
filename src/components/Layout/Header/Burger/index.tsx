@@ -1,10 +1,11 @@
 interface BurgerProps {
+  isOpen: boolean;
   handleClick: (value: boolean) => void;
 }
 
-export const Burger = ({ handleClick }) => {
+export const Burger = ({ isOpen, handleClick }) => {
   return (
-    <button className="burger-menu" onClick={handleClick}>
+    <button className={`${isOpen ? 'burger-menu burger-isOpen' : 'burger-menu'}`} onClick={handleClick}>
       <div />
     </button>
   )

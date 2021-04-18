@@ -33,7 +33,12 @@ export const MobileNav: FunctionComponent<MobileNavProps> = ({ isOpen, setIsOpen
               <li className={`${router.asPath === link.path ? 'mobile-link--active' : ''}`}>
                 <a className="capitalize" onClick={() => handleClick(link.path)}>{link.title}</a>
               </li>
-              {index === 2 && <hr style={{ borderTop: '1px solid var(--grey-medium)' }} />}
+              {index === 2 && (
+                <>
+                  <hr style={{ borderTop: '1px solid var(--grey-medium)' }} />
+                  <h3>Categories</h3>
+                </>
+              )}
             </React.Fragment>
           ))}
         </ul>

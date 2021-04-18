@@ -15,7 +15,7 @@ export const Header = () => {
     <>
       <header className="header container">
 
-        <Link className="header__logo" href="/">Coffee Shop</Link>
+        <Link className="header__logo" href="/">Portify Coffee</Link>
 
         <nav className="nav">
           <ul className="nav__list">
@@ -69,7 +69,7 @@ export const Header = () => {
             </Link>
           </li>
         </ul>
-        <Burger handleClick={() => setIsOpen(prevState => !prevState)} />
+        <Burger isOpen={isOpen} handleClick={() => setIsOpen(prevState => !prevState)} />
         {/* <div className="burger-menu">
           <Image
             src={`${isOpen ? '/public/icons/icon-close.svg' : '/public/icons/icon-burger.svg'}`}
