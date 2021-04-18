@@ -36,12 +36,12 @@ export const CategoryBanner: FunctionComponent<CategoryBannerProps> = ({ categor
           <p className={`start-with-${category}`}>START WITH THIS</p>
           <div>
             <p>{type}</p>
-            <p>{formatPrice(data.products[0].price)}</p>
+            <p>{formatPrice(data?.products[0].price)}</p>
           </div>
 
           <div>
             <p>{typeDescription}</p>
-            <Link href={`/${data.products[0].category}/${data.products[0].slug}`}>
+            <Link href={`/${data?.products[0].category}/${data?.products[0].slug}`}>
               <button className={`${category}-cta`}>Shop now</button>
             </Link>
           </div>

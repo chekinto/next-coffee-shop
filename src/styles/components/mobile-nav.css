@@ -29,11 +29,11 @@
 }
 
 .slide-in {
-  transition: transform 0.3s var(--cubic-bezier);
+  transition: transform 0.2s var(--cubic-bezier);
   transform: translateX(100%);
 }
 
 .slide-out {
-  transition: transform 0.3s var(--cubic-bezier);
+  transition: transform 0.2s var(--cubic-bezier);
   transform: translateX(0);
 }

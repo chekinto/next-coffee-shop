@@ -21,8 +21,17 @@
 
 .feature-cards {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
+}
+
+@media(min-width: 576px) {
+  .feature-cards {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
 

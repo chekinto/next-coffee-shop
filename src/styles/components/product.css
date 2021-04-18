@@ -1,8 +1,6 @@
 .product__content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
+  flex-direction: column;
 }
 
 .product__image {
@@ -33,11 +31,11 @@
   margin-bottom: 2rem;
 }
 
-
-/* @media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
   .product__content {
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
   }
-} */
+}

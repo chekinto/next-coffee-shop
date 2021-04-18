@@ -14,8 +14,8 @@ export interface ProductProps {
   isPopular: boolean;
   quantity?: number;
   image?: {
-    url?: String;
-  }
+    url?: string;
+  },
   slug?: string;
   title?: string;
 }

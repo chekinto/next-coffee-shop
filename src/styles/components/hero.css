@@ -1,8 +1,11 @@
 .hero {
   display: grid;
   place-items: center;
+  background-image:url('/images/img-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 50vh;
-  background-color:var(--primary);
   color: var(--white);
 }
 

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useQuery } from '@apollo/client'
@@ -5,7 +6,7 @@ import { AdvertBanner, CategoryBanner, FeatureCard, GridList } from '../../../sr
 import { GET_CATEGORY } from '../../../src/queries'
 import { categoryCards } from './data'
 
-export default function CategoryAll() {
+const CategoryAll = () => {
   const router = useRouter()
   const { data, loading, error } = useQuery(GET_CATEGORY, {
     variables: { category: router.query.category }
@@ -21,6 +22,10 @@ export default function CategoryAll() {
 
   const filteredCategory = categoryCards.find(cat => cat.title === router.query.category)
 
+  function filterByCaffeine(value: boolean) {
+    console.log(value);
+  }
+
   return (
     <>
       <CategoryBanner
@@ -34,10 +39,11 @@ export default function CategoryAll() {
         <div className="category">
           {router.query.category === 'think' && (
             <div className="filter-container">
-              <button>CAFFEINE</button>
-              <button>CAFFEINE FREE</button>
+              <button onClick={() => filterByCaffeine(true)}>CAFFEINE</button>
+              <button onClick={() => filterByCaffeine(false)}>CAFFEINE FREE</button>
             </div>
           )}
+
           <div className="category__links">
             <Link href={`/think/all`}>
               <a className={checkPath(`/think/all`) ? 'category--active' : ''}>Think</a>
@@ -73,3 +79,5 @@ export default function CategoryAll() {
     </>
   )
 }
+
+export default CategoryAll

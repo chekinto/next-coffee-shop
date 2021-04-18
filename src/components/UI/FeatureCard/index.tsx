@@ -13,8 +13,8 @@ export const FeatureCard: FunctionComponent<FeatureCardProps> = ({ title, subhea
     <div className={`feature-card feature-card-${title}`}>
       <div className="feature-card__image">
         <img src={image} alt={`${title} - ${subheading}`} />
+        <div className={`${title}-separator`}></div>
       </div>
-      <div className={`${title}-separator`}></div>
 
       <div className="feature-card__content">
         <div>

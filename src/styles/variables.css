@@ -18,6 +18,8 @@
   --heading-3: 1.8rem;
   --heading-4: 1.4rem;
   --small-text: 0.8rem;
+
+  --shadow:  rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* Breakpoints */

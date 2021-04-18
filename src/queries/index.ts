@@ -1,3 +1,4 @@
+import { formatPrice } from './../utils/index';
 import { gql } from '@apollo/client'
 
 // QUERIES
@@ -26,6 +27,7 @@ export const SINGLE_PRODUCT = gql`
     product(where: {slug: $slug}) {
       id
       title
+      category
       description
       descriptionLong
       price
@@ -44,10 +46,12 @@ export const GET_CATEGORY = gql`
     products(where: {category: $category}) {
       id
       title
+      description
       descriptionLong
       price
       isPopular
       slug
+      caffeine
       image {
         url
       }
@@ -61,8 +65,11 @@ export const LATEST_ARRIVALS = gql`
       id
       title
       category
+      description
       descriptionLong
       slug
+      price
+      quantity
       image {
         url
       }
@@ -77,6 +84,17 @@ export const SINGLE_CATEGORY = gql`
       category
       slug
       price
+    }
+  }
+`
+// Filters by caffeine
+export const IS_CAFFEINE = gql`
+  query IsCaffeine($category: String, $caffeine: Boolean){
+    products(where:{caffeine:false, category: "think"}){
+      title
+      category
+      slug
+      caffeine
     }
   }
 `

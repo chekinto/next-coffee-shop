@@ -18,6 +18,20 @@ export default function SingleProduct() {
   if (loading) return <h1>Loading...</h1>
   if (error) return <h1>Error...{error.message}</h1>
 
+
+  function handleClick(data) {
+    const payload = {
+      id: data.product.id,
+      title: data.product.title,
+      description: data.product.description,
+      price: data.product.price[0],
+      quantity: data.product.quantity,
+      image: data.product.image.url
+    }
+
+    addToBasket(payload)
+  }
+
   return (
     <>
       <section className="product container">
@@ -35,7 +49,7 @@ export default function SingleProduct() {
               />
             </span>
 
-            <img src={data?.product?.image[0].url} alt={data?.product?.title} />
+            <img src={data?.product?.image.url} alt={data?.product?.title} />
           </div>
 
           <div className="product__details">
@@ -46,7 +60,7 @@ export default function SingleProduct() {
 
             <div className="product__cta">
               <span className="product__price">{formatPrice(data?.product?.price[0])}</span>
-              <button className="btn" onClick={() => addToBasket(data)}>Add to cart</button>
+              <button className="btn" onClick={() => handleClick(data)}>Add to cart</button>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { Dispatch, FunctionComponent } from 'react'
+import { FunctionComponent } from 'react'
 import { createContext, useContext, useReducer } from 'react'
 import { basketReducer } from './reducers'
 import { UserProps, ProductProps } from '../types'
@@ -11,7 +11,8 @@ const user = {
 }
 
 interface AppContextProps {
-  state: UserProps,
+  state: UserProps;
+  dispatch: (state: UserProps, action: any) => void;
   addToBasket: (ProductProps) => void;
   children: React.ReactNode;
 }
@@ -22,20 +23,13 @@ export const AppContextProvider: FunctionComponent<AppContextProps> = ({ childre
   const [state, dispatch] = useReducer(basketReducer, user)
 
   function addToBasket(data) {
-    const { product: { id, title, description, image, price } } = data;
-    const payload = {
-      id,
-      title,
-      description,
-      image: image[0].url,
-      price: price[0]
-    }
-    dispatch({ type: 'ADD_TO_BASKET', payload })
+    dispatch({ type: 'ADD_TO_BASKET', data })
   }
 
   return (
     <AppContext.Provider value={{
       state,
+      dispatch,
       addToBasket
     }}>
       {children}

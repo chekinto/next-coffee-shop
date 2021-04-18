@@ -27,7 +27,7 @@
   width: 1.5rem;
   background: var(--black);
   height: 2px;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .burger-menu > div::after {
@@ -38,17 +38,19 @@
   width: 1.5rem;
   background: var(--black);
   height: 2px;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 /* Dynamic css selectors */
 .burger-isOpen.burger-menu > div {
   visibility: hidden;
 }
+
 .burger-isOpen.burger-menu > div::before {
   transform: rotate(-45deg);
   visibility: visible;
 }
+
 .burger-isOpen.burger-menu > div::after {
   transform: rotate(45deg);
   visibility: visible;

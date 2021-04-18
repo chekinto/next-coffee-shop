@@ -1,11 +1,37 @@
 .advert-banner {
+  background-color: var(--grey);
+  margin: 2rem 0;
+}
 
+.advert-banner__inner {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .advert-banner__image {
+  padding: 0;
+  margin: 0;
+}
 
+.advert-banner__image img {
+  display: block;
+  object-fit: cover;
 }
 
 .advert-banner__content {
   padding: 2rem;
+}
+
+.advert-banner__reverse {
+  flex-direction: row-reverse;
+}
+
+@media(min-width: 768px) {
+  .advert-banner__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: initial;
+  }
 }
