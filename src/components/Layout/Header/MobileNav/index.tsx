@@ -36,7 +36,7 @@ export const MobileNav: FunctionComponent<MobileNavProps> = ({ isOpen, setIsOpen
               {index === 2 && (
                 <>
                   <hr style={{ borderTop: '1px solid var(--grey-medium)' }} />
-                  <h3>Categories</h3>
+                  <h3 style={{ marginBottom: '2.5rem' }}>Categories</h3>
                 </>
               )}
             </React.Fragment>

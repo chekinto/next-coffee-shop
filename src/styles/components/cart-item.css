@@ -3,12 +3,14 @@
   grid-template-columns: 20rem auto;
   height: 20rem;
   width: 100%;
-  border: 1px solid green;
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 2rem;
+  overflow: hidden;
 }
 
 .cart-item__image {
   flex: 1;
-  height: 100%;
 }
 
 .cart-item__image img {

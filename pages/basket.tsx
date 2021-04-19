@@ -7,6 +7,8 @@ import { formatPrice } from '../src/utils'
 export default function Basket() {
   const { state } = useAppContext();
 
+  console.log(`state`, state)
+
   const EmptyBasket = () => {
     return (
       <>
@@ -22,8 +24,9 @@ export default function Basket() {
     return (
       <>
         {state.basket.map(product => {
+          console.log('product :>> ', product);
           return (
-            <CartItem {...product} />
+            <CartItem key={product.id} {...product} />
           )
         })}
       </>

@@ -2,6 +2,7 @@ import { UserProps } from "../../types"
 
 // NEED TO FIND SOLUTION FOR ACTION TYPE: ANY
 export const basketReducer = (state: UserProps, action: any) => {
+  console.log(`action`, action)
   switch (action.type) {
     case 'ADD_TO_BASKET': {
       return {

@@ -15,7 +15,7 @@ export const Header = () => {
     <>
       <header className="header container">
 
-        <Link className="header__logo" href="/">Portify Coffee</Link>
+        <Link className="header__logo" href="/">Coffee Break</Link>
 
         <nav className="nav">
           <ul className="nav__list">

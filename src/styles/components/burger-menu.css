@@ -1,6 +1,7 @@
 .burger-menu {
   display: inline-block;
   border: none;
+  outline: none;
   background-color: transparent;
   padding: 0;
   height: 1.25rem;
@@ -49,11 +50,13 @@
 .burger-isOpen.burger-menu > div::before {
   transform: rotate(-45deg);
   visibility: visible;
+  top: 50%;
 }
 
 .burger-isOpen.burger-menu > div::after {
   transform: rotate(45deg);
   visibility: visible;
+  top: 50%;
 }
 
 @media(min-width: 675px) {

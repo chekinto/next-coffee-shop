@@ -1,8 +1,39 @@
 footer {
-  margin-top: auto;
+  background-color: var(--grey);
+  padding: 2rem 0;
+  margin-top: 2rem;
 }
 
 .footer__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+}
+
+.footer__grid ul li {
+  list-style: none;
+}
+
+.footer__grid ul li + li {
+  list-style: none;
+  margin-bottom: .5rem;
+}
+
+.footer__social {
+  display: flex;
+}
+
+.footer__social li {
+  margin-right: 1rem;
+}
+
+@media(min-width: 768px) {
+  footer {
+    padding: 4rem 0;
+  }
+  
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
 }

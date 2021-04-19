@@ -23,7 +23,7 @@ export const AppContextProvider: FunctionComponent<AppContextProps> = ({ childre
   const [state, dispatch] = useReducer(basketReducer, user)
 
   function addToBasket(data) {
-    dispatch({ type: 'ADD_TO_BASKET', data })
+    dispatch({ type: 'ADD_TO_BASKET', payload: data })
   }
 
   return (

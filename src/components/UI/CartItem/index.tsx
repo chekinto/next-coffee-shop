@@ -21,7 +21,7 @@ export const CartItem: FunctionComponent<ProductProps> = ({ id, image, title, de
         <p>{formatPrice(price)}</p>
         <div className="quantity">
           <button className="btn">-</button>
-          <span>Quantity</span>
+          <span>1</span>
           <button
             onClick={() => increment({ variables: { id, quantity: 2 } })}
             className="btn">+</button>
