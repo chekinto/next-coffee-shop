@@ -6,7 +6,7 @@ export default function Saved() {
   return (
     <>
       <Head>
-        <title>My Favourites | Coffee Shop</title>
+        <title>My Favourites | Coffee Break</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

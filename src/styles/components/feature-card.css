@@ -79,3 +79,9 @@ div[class*="-separator"] {
 .chill-separator {
   background-color: red;
 }
+
+@media(min-width: 768px) {
+  .feature-card {
+    margin: 0;
+  }
+}

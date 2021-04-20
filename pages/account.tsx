@@ -4,7 +4,7 @@ export default function Account() {
   return (
     <>
       <Head>
-        <title>Account | Coffee Shop</title>
+        <title>Account | Coffee Break</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

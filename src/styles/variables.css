@@ -4,6 +4,8 @@
   --grey: hsl(0, 0%, 93%);
   --grey-medium: hsl(0, 1%, 83%);
   --primary: hsl(234, 57%, 65%);
+  --red: hsl(0, 71%, 52%);
+  --red-accent: hsl(0, 71%, 33%);
   
   --border-radius-sm: .25rem;
   --border-radius-md: .5rem;

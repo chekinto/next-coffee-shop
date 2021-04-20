@@ -86,6 +86,9 @@ button[class*="-cta"] {
 
 .think-cta {
   background-color: green;
+  text-transform: uppercase;
+  padding: .5rem 1rem;
+  border-radius: .25rem;
 }
 
 .chill-cta {

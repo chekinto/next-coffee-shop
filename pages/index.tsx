@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Coffee store | Home</title>
+        <title>Home | Coffee Break</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

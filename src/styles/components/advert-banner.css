@@ -19,19 +19,45 @@
   object-fit: cover;
 }
 
-.advert-banner__content {
+.advert-banner__content-wrapper {
   padding: 2rem;
 }
 
+.advert-banner__heading {
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: bolder;
+  font-size: .8rem;
+}
+
+.advert-banner__title {
+  letter-spacing: .05rem;
+}
+
+.advert-banner__content {
+  font-weight: light;
+}
+
+.advert-banner__button {
+  background-color: var(--red);
+  font-weight: bold;
+  color: var(--white);
+  font-size: .75rem;
+}
+
 .advert-banner__reverse {
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
 }
 
 @media(min-width: 768px) {
   .advert-banner__inner {
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     text-align: initial;
+  }
+
+  .advert-banner__reverse {
+    flex-direction: row-reverse;
   }
 }

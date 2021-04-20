@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div>
       <Head>
-        <title>Contact | Coffee Shop</title>
+        <title>Contact | Coffee Break</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

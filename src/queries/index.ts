@@ -98,7 +98,15 @@ export const IS_CAFFEINE = gql`
     }
   }
 `
-
+// Fetch products based on search text
+export const EXECUTE_SEARCH = gql`
+  query ExecuteSearch($query: String) {
+    products(where: {OR:[{title_contains: $query}, {description_contains:$query}]}) {
+      title
+      description
+    }
+  }
+`
 // MUTATIONS
 export const UPDATE_QUANTITY = gql`
   mutation UpdateQuantity($id: ID, $quantity: number){

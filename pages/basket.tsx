@@ -36,7 +36,7 @@ export default function Basket() {
   return (
     <>
       <Head>
-        <title>Basket | Coffee Shop</title>
+        <title>Basket | Coffee Break</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
